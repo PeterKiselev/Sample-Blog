@@ -1,0 +1,179 @@
+@import 'menu';
+
+.header {
+    @include posA(0, 0, 0);
+    z-index: 10;
+
+    &__top-menu { 
+        background-color: $primary-color-btn;
+        @media screen and (min-width: 576px) { background-color: $top-menu-bg; }
+    }
+}
+
+.top-menu {
+    padding: 12px 5px;
+    @include flex;
+
+    @media screen and (min-width: 576px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    &__social {
+        display: none;
+        margin-left: -5px;
+        @media screen and (min-width: 576px) { display: block; }
+    }
+}
+
+.user-block {
+    width: 100%;
+    @include flex;
+
+    @media screen and (min-width: 576px) {
+        justify-content: flex-end;
+        width: auto;
+        margin-right: -15px;
+    }
+    &__item {
+        padding: 0 15px;
+        text-transform: uppercase;
+
+        &:not(:last-child) {
+            order: 1;
+
+            @media screen and (min-width: 576px) {
+                &:not(:last-child) {
+                    border-right: $border-width solid $icon-color;
+                    order: 0;
+                }
+            }
+        }
+    }
+    
+}
+
+.user {
+    @include flex;
+    @include hover {
+        .user__icon, .user__text { color: $header-primary-color; }
+    }
+
+    &__icon { 
+        margin-right: 7px;
+        @include font(null, $fz: 1.8rem, $fc: $icon-color);
+    }
+    &__text {
+        vertical-align: bottom;
+        @include font($ff: $menu-ff, $fz: 1rem, $fc: rgba($secondary-color, .5), $lh: null);
+        @include tr;
+    }
+}
+
+.lang {
+    position: relative;
+    @include flex;
+    @include hover {
+        .lang__icon, .lang__arrow, .placeholder_select { color: $header-primary-color; fill: $header-primary-color; }
+    }
+    &__icon {
+        @extend .user__icon;
+        cursor: pointer;
+    }
+    &__arrow {
+        @include posA($right: 0);
+        fill: rgba($secondary-color, .5);
+        @include tr;
+    }
+}
+
+.main-menu {
+    background-color: $primary-color;
+    position: relative;
+
+    @media screen and (min-width: 576px) { background-color: transparent; }
+
+    .menu-opened & { @include posA(0,0,0) ;}
+}
+
+.toggler {
+    z-index: 10;
+    padding: 10px;
+    
+    &:hover {
+        .toggler__icon { color: $header-primary-color; }
+    }
+
+    &__icon { 
+        color: $secondary-color;
+        font-size: 3.2rem;
+        @include tr;
+    }
+
+    @media screen and (min-width: 1070px) { display: none; }
+}
+
+.nav {
+    padding: 10px;
+    @include flex;
+    color: $secondary-color;
+
+    @media screen and (min-width: 1070px) { padding: 0; }
+}
+
+.logo {
+    position: relative;
+    z-index: 10;
+    @include hover {
+        .title { color: $header-primary-color; }
+    }
+}
+
+.nav-actions {
+    @include flex($jc: inherit);
+
+    &__item:not(:last-child) {
+        display: none;
+
+        @media screen and (min-width: 1070px) {
+            border-right: $border-width solid $icon-color;
+            display: inline-block;
+        }
+    }
+    &__link {
+        padding: 5px 12px;
+        @include hover {
+            .nav-actions__icon { color: $header-primary-color; }
+        }
+    }
+    &__icon { font-size: 2.4rem; }
+}
+
+.cart {
+    position: relative;
+    .menu-opened & {
+        z-index: 10;
+    }
+    @include hover {
+        &:before {
+            background-color: $secondary-color;
+            color: $header-primary-color;
+            border-color: $header-primary-color;
+        }
+    }
+    &:before {
+        content: '7';
+        @include posA($top: -12px, $right: -8px);
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 23px;
+        border: $border-width solid transparent;
+        background-color: $header-primary-color;
+        color: $secondary-color;
+        @include tr;
+     
+        @media screen and (min-width: 1070px) { display: none; }
+    }
+}

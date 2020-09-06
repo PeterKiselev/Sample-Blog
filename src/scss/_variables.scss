@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;700&display=swap');
+
+$body-ff  : 'Open Sans', sans-serif;
+$menu-ff  : 'Montserrat', sans-serif;
+$title-ff : 'Montserrat', sans-serif;
+$btn-ff   : 'Montserrat', sans-serif;
+
+$black        : #000;
+$dark-black   : #191919;
+$medium-black : #212121;
+
+$light-gray  : #f5f5f5;
+$medium-gray : #eee; 
+$dark-gray   : #303030;
+
+$secondary-color      : #fff;
+$header-primary-color : #ff4081;
+$primary-color-btn    : #303f9f;
+$primary-color        : #3f51b5;
+
+$facebook-color   : #3b5999;
+$twitter-color    : #55acee;
+$vk-color         : #4c75a3;
+$pinterest-color  : #ff2e56;
+$tumblr-color     : #34465d;
+$dribbble-color   : #ea4c89;
+
+$icon-color: rgba($secondary-color, .38);
+
+$body-color : $black;
+$btn-color  : $secondary-color;
+
+$body-bg     : $secondary-color;
+$top-menu-bg : $dark-black;
+$btn-bg      : $primary-color-btn;
+$section-bg  : $light-gray;
+ 
+// $gray        : #808080;
+// $medium-gray : #898f8f;
+// $light-black  : #333333;
+// $section-color : $black;
+
+$border-width: 1px;
+
+$letter-space: .1em;
+
+$gap: 30px;

@@ -1,0 +1,83 @@
+.social {
+    &__item { display: inline-block; }
+
+    &__link {
+        padding: 0 5px;
+        display: inline-block;
+        color: $icon-color;
+        font-size: 1.6rem;
+        @include tr;
+        @include hover {
+            color: $header-primary-color;
+            transform: scale(1.2);
+        }
+    }
+
+    &--full {
+        $social-size: 36px;
+        @include flex;
+        
+        .social__link {
+            width: $social-size;
+            height: $social-size;
+            border: $border-width solid transparent;
+            line-height: calc(#{$social-size} - (#{$border-width} * 2));
+            font-size: 1.8rem;
+            color: $secondary-color;
+            border-radius: 50%;
+            text-align: center;
+            @include tr;
+            @include hover {
+                background-color: $secondary-color;
+            }
+        }
+    }
+}
+
+.facebook {
+    background-color: $facebook-color;
+    @include hover {
+        color: $facebook-color;
+        border-color: $facebook-color;
+    }
+}
+
+.twitter {
+    background-color: $twitter-color;
+    @include hover {
+        color: $twitter-color;
+        border-color: $twitter-color;
+    }
+}
+
+.vk {
+    background-color: $vk-color;
+    @include hover {
+        color: $vk-color;
+        border-color: $vk-color;
+    }
+}
+
+.pinterest {
+    background-color: $pinterest-color;
+    @include hover {
+        color: $pinterest-color;
+        border-color: $pinterest-color;
+    }
+}
+
+.tumblr {
+    background-color: $tumblr-color;
+    @include hover {
+        color: $tumblr-color;
+        border-color: $tumblr-color;
+    }
+}
+
+.dribbble {
+    background-color: $dribbble-color;
+    @include hover {
+        color: $dribbble-color;
+        border-color: $dribbble-color;
+    }
+}

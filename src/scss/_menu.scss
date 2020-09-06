@@ -1,0 +1,78 @@
+.menu {
+    @include flex($jc: flex-start);
+    @include font($ff: $menu-ff, $fz: 1.4rem);
+
+    &__item { 
+        display: inline-block; 
+        margin: 0 5px;
+    }
+    &__link {
+        display: inline-block;
+        text-transform: uppercase;
+        padding: 1.5em 1.4em;
+        border: $border-width solid transparent;
+        position: relative;
+        @include tr;
+        @include hover { color: $header-primary-color; }
+    }
+
+    &--dropdown {
+        padding-top: 72px;
+        @include posA(0, 0, 0, 0);
+        z-index: 5;
+        height: 100vh;
+        justify-content: center;
+        flex-direction: column;
+        background-color: $dark-gray;
+        opacity: 0;
+        transform-origin: 25px 52px;
+        transform: translate(0, 0) scale(.0);
+        @include tr(.5s);
+
+        .menu__link {
+            border-top: $border-width * 4 solid transparent;
+            border-bottom: $border-width * 4 solid transparent;
+            @include hover { border-bottom-color: $header-primary-color; }
+
+            &--active { border-bottom-color: $header-primary-color; }
+
+            svg {
+                @include posA($right: 0, $top: 50%);
+                @include transform($delta_x: 0);
+                fill: $secondary-color;
+            }
+        }
+
+        .menu-opened & {
+            opacity: 1;
+            transform: translate(0, 0) scale(1);
+        }
+
+        @media screen and (min-width: 1070px) {
+            flex-direction: row;
+            justify-content: center;
+            opacity: 1;
+            height: auto;
+            padding-top: 0;
+            position: relative;
+            background-color: transparent;
+            transform: translate(0, 0) scale(1);
+        }
+    }
+
+    &--blog {
+        display: none;
+        @media screen and (min-width: 1070px) {
+            display: flex;
+        }
+    }
+
+    &--footer {
+        flex-wrap: wrap;
+        .menu__link {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.menu-opened { overflow: hidden; }

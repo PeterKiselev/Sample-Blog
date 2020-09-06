@@ -1,0 +1,203 @@
+.section {
+    &--widgets {
+        background-color: $medium-black;
+        padding-bottom: 30px;
+        @media screen and (min-width: 992px) { padding-bottom: 80px; }
+    }
+}
+
+.widgets {
+    @include flex($jc: center, $ali: stretch);
+    flex-wrap: wrap;
+    min-height: 445px;
+    margin: 0 -15px;
+
+    &__item {
+        margin: 0 15px;
+        flex-basis: 100%;
+        @media screen and (min-width: 576px) {
+            flex-basis: 270px;
+        }
+    }
+    &__logo {
+        @media screen and (min-width: 576px) {
+            display: none;
+        }
+    }
+}
+
+.widget {
+    width: 100%;
+    max-width: 100%;
+    margin: 40px auto 0;
+    @media screen and (min-width: 425px) and (max-width: 575px) { max-width: 80%; }
+    @media screen and (min-width: 576px) {
+        max-width: 270px;
+    }
+
+    &--social {
+        display: none;
+        @media screen and (min-width: 576px) { display: block; }
+    }
+    &__text {
+        margin-top: 30px;
+        color: rgba($secondary-color, .5);
+    }
+    &__content {
+        margin-top: 30px;
+    }
+    
+}
+
+.menu-tabs {
+    &__tab {
+
+        & + & {
+            margin-top: 5px;
+        }
+
+        & :checked ~ .menu-tab__content {
+            display: block;
+        }
+
+        & :checked + .menu-tab__title {
+            border-color: rgba($secondary-color, .38);
+            &:after {
+                opacity: 0;
+            }    
+        }
+    }
+}
+
+.menu-tab {
+    &__field, &__content { display: none; }
+
+    border-radius: 4px;
+    border: $border-width solid rgba($secondary-color, .38);
+    @include tr;
+    @include hover {
+        border-color: $secondary-color;
+
+        .menu-tab__title {
+            color: $secondary-color;
+
+            &:after, &:before {
+                background-color: $secondary-color;
+            }
+        }
+    }
+
+    &__title {
+        padding: 13px;
+        font-weight: bold;
+        color: rgba($secondary-color, .7);
+        text-transform: uppercase;
+        cursor: pointer;
+        display: block;
+        position: relative;
+        border-bottom: $border-width solid transparent;
+        @include tr;
+
+        &:after, &:before {
+            content: '';
+            @include posA(50%, $right: 13px);
+            display: inline-block;
+            height: $border-width * 2;
+            width: 14px;
+            background-color: rgba($secondary-color, .5);
+            @include tr;
+        }
+        &:after {
+            transform: rotate(-90deg);
+            opacity: 1;
+        }
+    }
+
+    &__content {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    &__link {
+        display: inline-block;
+        width: 100%;
+        padding: 8px 13px;
+        text-transform: capitalize;
+        color: $secondary-color;
+        opacity: .5;
+        @include tr;
+        @include hover {
+            opacity: 1;
+            background-color: rgba($black, .3);
+        }
+    }
+    // &__item:not(:first-child)  {
+    //     margin-top: ;
+    // }
+}
+
+.publications {
+    &__item {
+        display: inline-block;
+        padding-bottom: 15px;
+
+        &:not(:first-child) {
+            padding-top: 15px;
+            border-top: $border-width solid rgba($secondary-color, .12);
+        }
+    }
+}
+
+.publication {
+
+    &__text {
+        @include flex;
+    }
+
+    &__icon {
+        color: $twitter-color;
+        font-size: 2.4rem;
+        display: inline-block;
+        padding: 0 10px 10px;
+    }
+
+    &__comment {
+        font-size: 1.3rem;
+        color: $secondary-color;
+        opacity: .7;
+        @include tr;
+        @include hover {
+            opacity: 1;
+        }
+    }
+    &__about {
+        @include flex;
+    }
+    &__time {
+        display: inline-block;
+        position: relative;
+
+        &:after {
+            // cont
+        }
+    }
+}
+
+.form {
+    // &__item {
+    //     width: 100%;
+    // }
+    // &--footer {
+    //     .form__item:not(:first-child) {
+    //         margin-top: 10px;
+    //     }
+    //     .form__field {
+    //         background-color: transparent;
+    //         color: $secondary-color;
+    //         &::placeholder {
+    //             color: $secondary-color;
+    //         }
+    //     }
+    // }
+}
+  
+  

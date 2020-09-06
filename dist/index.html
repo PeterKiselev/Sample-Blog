@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/260e80cfa3.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <title></title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__top-menu">
+            <div class="container">
+                <div class="top-menu">
+                    <ul class="top-menu__social social">
+                        <li class="social__item">
+                            <a href="https://www.facebook.com/" class="social__link" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="https://twitter.com/" class="social__link" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="https://www.pinterest.com/" class="social__link" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="https://vk.com/" class="social__link" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-vk"></i>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="https://myaccount.google.com/" class="social__link" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-google-plus-g"></i>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="https://www.behance.net/" class="social__link" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-behance"></i>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="https://dribbble.com/" class="social__link" rel="noopener noreferrer">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="https://www.instagram.com/" class="social__link" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="user-block">
+                        <div class="user-block__item">
+                            <a href="#" class="user">
+                                <span class="user__icon material-icons">account_circle</span>
+                                <span class="user__text">sign in</span>
+                            </a>
+                        </div>
+                        <div class="user-block__item">
+                            <div class="lang">
+                                <span class="lang__icon material-icons">language</span>
+                                <svg class="lang__arrow" width="11" height="6">
+                                    <use xlink:href="#arrow-down"></use>
+                                </svg>
+                                <select name="lang" data-fixed-placeholder="" class="lang__select minimal hide_select">
+                                    <option class="lang__item" value="1">eng</option>
+                                    <option class="lang__item" value="2" selected="selected">rus</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-menu">
+            <div class="container">
+                <nav class="nav">
+                    <a href="#" class="toggler" onclick="toggleMenu(event)">
+                        <span class="toggler__icon material-icons">menu</span>
+                    </a>
+                    <a href="index.html" class="logo">
+                        <h1 class="title title--logo title--white">logo</h1>
+                    </a>
+                    <ul class="menu menu--dropdown">
+                        <li class="menu__item">
+                            <a href="#about" class="menu__link menu__link--active">
+                                home
+                                <svg width="11" height="6">
+                                    <use xlink:href="#arrow-down"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#portfolio" class="menu__link">
+                                portfolio
+                                <svg width="11" height="6">
+                                    <use xlink:href="#arrow-down"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#blog" class="menu__link">
+                                blog
+                                <svg width="11" height="6">
+                                    <use xlink:href="#arrow-down"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#widgets" class="menu__link">
+                                pages
+                                <svg width="11" height="6">
+                                    <use xlink:href="#arrow-down"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#aside" class="menu__link">
+                                shop
+                                <svg width="11" height="6">
+                                    <use xlink:href="#arrow-down"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">
+                                components
+                                <svg width="11" height="6">
+                                    <use xlink:href="#arrow-down"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">
+                                features
+                                <svg width="11" height="6">
+                                    <use xlink:href="#arrow-down"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav-actions">
+                        <li class="nav-actions__item">
+                            <a href="#" class="nav-actions__link search">
+                                <span class="nav-actions__icon material-icons">search</span>
+                            </a>
+                        </li>
+                        <li class="nav-actions__item">
+                            <a href="#" class="nav-actions__link">
+                                <span class="nav-actions__icon material-icons like">favorite_border</span>
+                            </a>
+                        </li>
+                        <li class="nav-actions__item">
+                            <a href="#" class="nav-actions__link cart">
+                                <span class="nav-actions__icon material-icons">shopping_cart</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section section--about section--bg">
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="about">
+                            <picture class="about__picture picture">
+                                <source srcset="https://picsum.photos/450/600" media="(max-width: 425px)">
+                                <source srcset="https://picsum.photos/800/1000" media="(max-width: 768px)">
+                                <source srcset="https://picsum.photos/1280/720" media="(max-width: 1024px)">
+                                <img class="about__img" src="img/about-bg.jpg" alt="about blog">
+                            </picture>
+                            <div class="container">
+                                <div class="about__content">
+                                    <div class="about__head">
+                                        <p class="about__subtitle">inspiration</p>
+                                        <h2 class="about__title title title--main title--white">Lorem Ipsum is simply dummy text
+                                            of
+                                            <br> the printing and typesetting industry</h2>
+                                    </div>
+                                    <a href="#" class="about__btn btn">read more</a>
+                                    <div class="about__author-block">
+                                        <a href="#" class="author">
+                                            <div class="author__img-wrap">
+                                                <img src="img/author-img-1.jpg" alt="author" class="author__img">
+                                            </div>
+                                            <h5 class="author__name author__name--white">henry little</h5>
+                                            <time class="author__time author__time--white" datetime="2016-04-28 10:15:00">April 28, 2016
+                                                10:15</time>
+                                        </a>
+                                        <div class="about__actions">
+                                            <a href="#" class="comments">
+                                                <span class="comments__icon material-icons">forum</span>
+                                                <span class="comments__text">Comments (28)</span>
+                                            </a>
+                                            <a href="#" class="likes">
+                                                <span class="likes__icon material-icons">favorite_border</span>
+                                                <span class="likes__text">Likes (07)</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="about">
+                            <picture class="about__picture picture">
+                                <source srcset="https://picsum.photos/450/600" media="(max-width: 425px)">
+                                <source srcset="https://picsum.photos/800/1000" media="(max-width: 768px)">
+                                <source srcset="https://picsum.photos/1280/720" media="(max-width: 1024px)">
+                                <img class="about__img" src="https://picsum.photos/1920/1200" alt="about blog">
+                            </picture>
+                            <div class="container">
+                                <div class="about__content">
+                                    <div class="about__head">
+                                        <p class="about__subtitle">inspiration</p>
+                                        <h2 class="about__title title title--main title--white">Lorem Ipsum is simply dummy text
+                                            of
+                                            <br> the printing and typesetting industry</h2>
+                                    </div>
+                                    <a href="#" class="about__btn btn">read more</a>
+                                    <div class="about__author-block">
+                                        <a href="#" class="author">
+                                            <div class="author__img-wrap">
+                                                <img src="img/author-img-1.jpg" alt="author" class="author__img">
+                                            </div>
+                                            <h5 class="author__name author__name--white">henry little</h5>
+                                            <time class="author__time author__time--white" datetime="2016-04-28 10:15:00">April 28, 2016
+                                                10:15</time>
+                                        </a>
+                                        <div class="about__actions">
+                                            <a href="#" class="comments">
+                                                <span class="comments__icon material-icons">forum</span>
+                                                <span class="comments__text">Comments (28)</span>
+                                            </a>
+                                            <a href="#" class="likes">
+                                                <span class="likes__icon material-icons">favorite_border</span>
+                                                <span class="likes__text">Likes (07)</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="about">
+                            <picture class="about__picture picture">
+                                <source srcset="https://picsum.photos/450/600" media="(max-width: 425px)">
+                                <source srcset="https://picsum.photos/800/1000" media="(max-width: 768px)">
+                                <source srcset="https://picsum.photos/1280/720" media="(max-width: 1024px)">
+                                <img class="about__img" src="https://picsum.photos/1920/1080" alt="about blog">
+                            </picture>
+                            <div class="container">
+                                <div class="about__content">
+                                    <div class="about__head">
+                                        <p class="about__subtitle">inspiration</p>
+                                        <h2 class="about__title title title--main title--white">Lorem Ipsum is simply dummy text
+                                            of
+                                            <br> the printing and typesetting industry</h2>
+                                    </div>
+                                    <a href="#" class="about__btn btn">read more</a>
+                                    <div class="about__author-block">
+                                        <a href="#" class="author">
+                                            <div class="author__img-wrap">
+                                                <img src="img/author-img-1.jpg" alt="author" class="author__img">
+                                            </div>
+                                            <div class="author__about">
+                                                <h5 class="author__name author__name--white">henry little</h5>
+                                                <time class="author__time author__time--white" datetime="2016-04-28 10:15:00">April 28, 2016
+                                                    10:15</time>
+                                            </div>
+                                        </a>
+                                        <div class="about__actions">
+                                            <a href="#" class="comments">
+                                                <span class="comments__icon material-icons">forum</span>
+                                                <span class="comments__text">Comments (28)</span>
+                                            </a>
+                                            <a href="#" class="likes">
+                                                <span class="likes__icon material-icons">favorite_border</span>
+                                                <span class="likes__text">Likes (07)</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev">
+                </div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+        <section class="section section--blog-block" id="blog">
+            <h2 class="visually-hidden">Blog </h2>
+            <div class="nav-blog">
+                <div class="container">
+                    <nav class="nav nav--menu-blog">
+                        <h5 class="nav__title title title--nav">sort blog:</h5>
+                        <select name="years" data-placeholder="Sort blog" class="hide_select">
+                            <option value="1">
+                                <a href="#" class="menu__link menu__link--blog">all</a>
+                            </option>
+                            <option value="2">
+                                <a href="#" class="menu__link menu__link--blog">photography</a>
+                            </option>
+                            <option value="3">
+                                <a href="#" class="menu__link menu__link--blog">lifestyle</a>
+                            </option>
+                            <option value="4">
+                                <a href="#" class="menu__link menu__link--blog">trip</a>
+                            </option>
+                            <option value="5">
+                                <a href="#" class="menu__link menu__link--blog">inspiration</a>
+                            </option>
+                        </select>
+                        <ul class="menu menu--blog">
+                            <li class="menu__item menu__item--blog">
+                                <a href="#" class="menu__link menu__link--blog">all</a>
+                            </li>
+                            <li class="menu__item menu__item--blog">
+                                <a href="#" class="menu__link menu__link--blog">photography</a>
+                            </li>
+                            <li class="menu__item menu__item--blog">
+                                <a href="#" class="menu__link menu__link--blog">lifestyle</a>
+                            </li>
+                            <li class="menu__item menu__item--blog">
+                                <a href="#" class="menu__link menu__link--blog">trip</a>
+                            </li>
+                            <li class="menu__item menu__item--blog">
+                                <a href="#" class="menu__link menu__link--blog">inspiration</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="section__content">
+                <div class="container">
+                    <div class="blog-wrap">
+                        <section class="section section--blog">
+                            <div class="articles">
+                                <article class="article article--full full a">
+                                    <div class="article__media-wrap">
+                                        <a href="#" class="article__media">
+                                            <picture class="article__img-wrap">
+                                                <img src="img/blog/article-img-1.jpg" alt="article" class="article__img">
+                                            </picture>
+                                        </a>
+                                        <a href="#" class="article__play">
+                                            <span class="article__play-icon material-icons">play_circle_outline</span>
+                                        </a>
+                                        <div class="article__figcaption">
+                                            <a href="#" class="article__rubric">lifestyle</a>
+                                            <div class="article__actions">
+                                                <a href="#" class="comments">
+                                                    <span class="comments__icon material-icons">forum</span>
+                                                    <span class="comments__text">7</span>
+                                                </a>
+                                                <a href="#" class="likes">
+                                                    <span class="likes__icon material-icons">favorite_border</span>
+                                                    <span class="likes__text">15</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="article__about">
+                                        <a href="#" class="article__description">
+                                            <h4 class="article__title">10 Things To Do To Change Your Life Forever</h4>
+                                            <p class="article__text">The one constant thing in our life is change. We cannot avoid it and the more we resist change the tougher our life becomes. I know this because I was very skilled at deflecting change in life.</p>
+                                        </a>
+                                        <div class="article__author">
+                                            <a href="#" class="author author--row">
+                                                <div class="author__img-wrap">
+                                                    <img src="img/author-img-0.jpg" alt="author" class="author__img">
+                                                </div>
+                                                <div class="author__about author__about--row">
+                                                    <h5 class="author__name author__name--row">henry little</h5>
+                                                    <time class="author__time" datetime="2016-04-28 10:15:00">April 28, 2016 10:15</time>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="article__more">
+                                                <span class="article__more-icon material-icons">more_vert</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="article article--row b article--none row">
+                                    <div class="article__media-wrap">
+                                        <a href="#" class="article__media">
+                                            <picture class="article__img-wrap">
+                                                <img src="img/blog/article-img-2.jpg" alt="article" class="article__img">
+                                            </picture>
+                                        </a>
+                                        <div class="article__figcaption">
+                                            <a href="#" class="article__rubric">inspiration</a>
+                                            <div class="article__actions">
+                                                <a href="#" class="comments">
+                                                    <span class="comments__icon material-icons">forum</span>
+                                                    <span class="comments__text">7</span>
+                                                </a>
+                                                <a href="#" class="likes">
+                                                    <span class="likes__icon material-icons">favorite_border</span>
+                                                    <span class="likes__text">15</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="article__about">
+                                        <a href="#" class="article__description">
+                                            <h4 class="article__title article__title--primary">Lorem ipsum dolor sit amet.</h4>
+                                            <p class="article__text">Lorem ipsum dolor sit amet, to consectetur  adipi scing elit. Nulla vehicula lorem and lacus. Vestibulum vitae mauris lorem ipsum doar.</p>
+                                        </a>
+                                        <div class="article__author">
+                                            <a href="#" class="author author--row">
+                                                <div class="author__img-wrap">
+                                                    <img src="img/author-img-sm-1.jpg" alt="author" class="author__img">
+                                                </div>
+                                                <div class="author__about author__about--row">
+                                                    <h5 class="author__name author__name--row">james leman</h5>
+                                                    <time class="author__time" datetime="2016-04-28 10:15:00">April 28, 2016</time>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="article__more">
+                                                <span class="article__more-icon material-icons">more_vert</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="article article--sm-col c row">
+                                    <div class="article__media-wrap">
+                                        <a href="#" class="article__media">
+                                            <picture class="article__img-wrap">
+                                                <img src="img/blog/article-img-3.jpg" alt="article" class="article__img">
+                                            </picture>
+                                        </a>
+                                        <a href="#" class="article__play">
+                                            <span class="article__play-icon material-icons">play_circle_outline</span>
+                                        </a>
+                                        <div class="article__figcaption">
+                                            <a href="#" class="article__rubric">inspiration</a>
+                                            <div class="article__actions">
+                                                <a href="#" class="comments">
+                                                    <span class="comments__icon material-icons">forum</span>
+                                                    <span class="comments__text">7</span>
+                                                </a>
+                                                <a href="#" class="likes">
+                                                    <span class="likes__icon material-icons">favorite_border</span>
+                                                    <span class="likes__text">15</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="article__about">
+                                        <a href="#" class="article__description">
+                                            <h4 class="article__title">4 Natural Ways To Have Young Skin</h4>
+                                            <p class="article__text">Lorem ipsum dolor sit amet, to consectetur  adipi scing elit. Nulla vehicula lorem and lacus. Vestibulum vitae mauris lorem ipsum doar.</p>
+                                        </a>
+                                        <div class="article__author">
+                                            <a href="#" class="author author--row">
+                                                <div class="author__img-wrap">
+                                                    <img src="img/author-img-sm-1.jpg" alt="author" class="author__img">
+                                                </div>
+                                                <div class="author__about author__about--row">
+                                                    <h5 class="author__name author__name--row">james leman</h5>
+                                                    <time class="author__time" datetime="2016-04-28 10:15:00">April 28, 2016</time>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="article__more">
+                                                <span class="article__more-icon material-icons">more_vert</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="article article--sm-col article--no-about d article--none row">
+                                    <div class="article__media-wrap">
+                                        <a href="#" class="article__media">
+                                            <picture class="article__img-wrap">
+                                                <img src="img/blog/article-img-4.jpg" alt="article" class="article__img">
+                                            </picture>
+                                        </a>
+                                        <a href="#" class="article__play">
+                                            <span class="article__play-icon material-icons">play_circle_outline</span>
+                                        </a>
+                                        <div class="article__figcaption">
+                                            <a href="#" class="article__rubric">inspiration</a>
+                                            <div class="article__actions">
+                                                <a href="#" class="comments">
+                                                    <span class="comments__icon material-icons">forum</span>
+                                                    <span class="comments__text">7</span>
+                                                </a>
+                                                <a href="#" class="likes">
+                                                    <span class="likes__icon material-icons">favorite_border</span>
+                                                    <span class="likes__text">15</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="article__about">
+                                        <a href="#" class="article__description">
+                                            <h4 class="article__title">Lorem ipsum dolor sit amet consectetur adipisicing.</h4>
+                                            <p class="article__text">Lorem ipsum dolor sit amet, to consectetur  adipi scing elit. Nulla vehicula lorem and lacus. Vestibulum vitae mauris lorem ipsum doar.</p>
+                                        </a>
+                                        <div class="article__author">
+                                            <a href="#" class="author author--row">
+                                                <div class="author__img-wrap">
+                                                    <img src="img/author-img-sm-1.jpg" alt="author" class="author__img">
+                                                </div>
+                                                <div class="author__about author__about--row">
+                                                    <h5 class="author__name author__name--row">james leman</h5>
+                                                    <time class="author__time" datetime="2016-04-28 10:15:00">April 28, 2016</time>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="article__more">
+                                                <span class="article__more-icon material-icons">more_vert</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="article article--sm-col article--no-about e row">
+                                    <div class="article__media-wrap">
+                                        <a href="#" class="article__media">
+                                            <picture class="article__img-wrap">
+                                                <img src="img/blog/article-img-5.jpg" alt="article" class="article__img">
+                                            </picture>
+                                        </a>
+                                        <div class="article__figcaption">
+                                            <a href="#" class="article__rubric">inspiration</a>
+                                            <div class="article__actions">
+                                                <a href="#" class="comments">
+                                                    <span class="comments__icon material-icons">forum</span>
+                                                    <span class="comments__text">7</span>
+                                                </a>
+                                                <a href="#" class="likes">
+                                                    <span class="likes__icon material-icons">favorite_border</span>
+                                                    <span class="likes__text">15</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="article__about">
+                                        <a href="#" class="article__description">
+                                            <h4 class="article__title">Six Hobbies That Can Help You Beat Stress</h4>
+                                            <p class="article__text article__text--sm">Lorem ipsum dolor sit amet, to consectetur  adipi scing elit. Nulla vehicula lorem and lacus. Vestibulum vitae mauris lorem ipsum doar. </p>
+                                        </a>
+                                        <div class="article__author">
+                                            <a href="#" class="author author--row">
+                                                <div class="author__img-wrap">
+                                                    <img src="img/author-img-sm-2.jpg" alt="author" class="author__img">
+                                                </div>
+                                                <div class="author__about author__about--row">
+                                                    <h5 class="author__name author__name--row">james leman</h5>
+                                                    <time class="author__time" datetime="2016-04-28 10:15:00">April 28, 2016</time>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="article__more">
+                                                <span class="article__more-icon material-icons">more_vert</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="article article--sm-col f row">
+                                    <div class="article__media-wrap">
+                                        <a href="#" class="article__media">
+                                            <picture class="article__img-wrap">
+                                                <img src="img/blog/article-img-6.jpg" alt="article" class="article__img">
+                                            </picture>
+                                        </a>
+                                        <div class="article__figcaption">
+                                            <a href="#" class="article__rubric">inspiration</a>
+                                            <div class="article__actions">
+                                                <a href="#" class="comments">
+                                                    <span class="comments__icon material-icons">forum</span>
+                                                    <span class="comments__text">7</span>
+                                                </a>
+                                                <a href="#" class="likes">
+                                                    <span class="likes__icon material-icons">favorite_border</span>
+                                                    <span class="likes__text">15</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="article__about">
+                                        <a href="#" class="article__description">
+                                            <h4 class="article__title">10 Singals From Your Body Telling You Should Sleep More</h4>
+                                            <p class="article__text">Lorem ipsum dolor sit amet, to consectetur  adipi scing elit. Nulla vehicula lorem and lacus. Vestibulum vitae mauris lorem ipsum doar. </p>
+                                        </a>
+                                        <div class="article__author">
+                                            <a href="#" class="author author--row">
+                                                <div class="author__img-wrap">
+                                                    <img src="img/author-img-0.jpg" alt="author" class="author__img">
+                                                </div>
+                                                <div class="author__about author__about--row">
+                                                    <h5 class="author__name author__name--row">Benjamin Miller</h5>
+                                                    <time class="author__time" datetime="2016-04-28 10:15:00">April 28, 2016</time>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="article__more">
+                                                <span class="article__more-icon material-icons">more_vert</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="article article--full article--no-about col">
+                                    <div class="article__media-wrap">
+                                        <a href="#" class="article__media">
+                                            <picture class="article__img-wrap">
+                                                <img src="img/blog/article-img-7.jpg" alt="article" class="article__img">
+                                            </picture>
+                                        </a>
+                                        <a href="#" class="article__play">
+                                            <span class="article__play-icon material-icons">play_circle_outline</span>
+                                        </a>
+                                        <div class="article__figcaption">
+                                            <a href="#" class="article__rubric">inspiration</a>
+                                            <div class="article__actions">
+                                                <a href="#" class="comments">
+                                                    <span class="comments__icon material-icons">forum</span>
+                                                    <span class="comments__text">7</span>
+                                                </a>
+                                                <a href="#" class="likes">
+                                                    <span class="likes__icon material-icons">favorite_border</span>
+                                                    <span class="likes__text">15</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="article__about">
+                                        <a href="#" class="article__description">
+                                            <h4 class="article__title">Food That Actually Taste 
+                                                Better When You Freeze </h4>
+                                            <p class="article__text">Lorem ipsum dolor sit amet, to consectetur  adipi scing elit. Nulla vel vehicula lorem and lacus. Vestibulum vitae mauris. </p>
+                                        </a>
+                                        <div class="article__author">
+                                            <a href="#" class="author author--row">
+                                                <div class="author__img-wrap">
+                                                    <img src="img/author-img-sm-1.jpg" alt="author" class="author__img">
+                                                </div>
+                                                <div class="author__about author__about--row">
+                                                    <h5 class="author__name author__name--row">james leman</h5>
+                                                    <time class="author__time" datetime="2016-04-28 10:15:00">April 28, 2016</time>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="article__more">
+                                                <span class="article__more-icon material-icons">more_vert</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="article article--row col">
+                                    <div class="article__media-wrap">
+                                        <a href="#" class="article__media">
+                                            <picture class="article__img-wrap">
+                                                <img src="img/blog/article-img-8.jpg" alt="article" class="article__img">
+                                            </picture>
+                                        </a>
+                                        <div class="article__figcaption">
+                                            <a href="#" class="article__rubric">trip</a>
+                                            <div class="article__actions">
+                                                <a href="#" class="comments">
+                                                    <span class="comments__icon material-icons">forum</span>
+                                                    <span class="comments__text">3</span>
+                                                </a>
+                                                <a href="#" class="likes">
+                                                    <span class="likes__icon material-icons">favorite_border</span>
+                                                    <span class="likes__text">15</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="article__about">
+                                        <a href="#" class="article__description">
+                                            <h4 class="article__title">Why It’s Amazing To Date
+                                                People Who Love Traveling</h4>
+                                            <p class="article__text">Lorem ipsum dolor sit amet, to consectetur  adipi scing elit. Nulla vel vehicula lorem and lacus. Vestibulum vitae mauris. </p>
+                                        </a>
+                                        <div class="article__author">
+                                            <a href="#" class="author author--row">
+                                                <div class="author__img-wrap">
+                                                    <img src="img/author-img-sm-2.jpg" alt="author" class="author__img">
+                                                </div>
+                                                <div class="author__about author__about--row">
+                                                    <h5 class="author__name author__name--row">Benjamin Miller</h5>
+                                                    <time class="author__time" datetime="2016-04-28 10:15:00">April 28, 2016</time>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="article__more">
+                                                <span class="article__more-icon material-icons">more_vert</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="article article--row col">
+                                    <div class="article__media-wrap">
+                                        <a href="#" class="article__media">
+                                            <picture class="article__img-wrap">
+                                                <img src="img/blog/article-img-9.jpg" alt="article" class="article__img">
+                                            </picture>
+                                        </a>
+                                        <div class="article__figcaption">
+                                            <a href="#" class="article__rubric">lifestyle</a>
+                                            <div class="article__actions">
+                                                <a href="#" class="comments">
+                                                    <span class="comments__icon material-icons">forum</span>
+                                                    <span class="comments__text">18</span>
+                                                </a>
+                                                <a href="#" class="likes">
+                                                    <span class="likes__icon material-icons">favorite_border</span>
+                                                    <span class="likes__text">15</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="article__about">
+                                        <a href="#" class="article__description">
+                                            <h4 class="article__title">5 Useful Tips for Novice Painters</h4>
+                                            <p class="article__text">Lorem ipsum dolor sit amet, to consectetur  adipi scing elit. Nulla vel vehicula lorem and lacus. Vestibulum vitae mauris. </p>
+                                        </a>
+                                        <div class="article__author">
+                                            <a href="#" class="author author--row">
+                                                <div class="author__img-wrap">
+                                                    <img src="img/author-img-0.jpg" alt="author" class="author__img">
+                                                </div>
+                                                <div class="author__about author__about--row">
+                                                    <h5 class="author__name author__name--row">henry little</h5>
+                                                    <time class="author__time" datetime="2016-04-28 10:15:00">April 28, 2016</time>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="article__more">
+                                                <span class="article__more-icon material-icons">more_vert</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="article article--full article--none col">
+                                    <div class="article__media-wrap">
+                                        <a href="#" class="article__media">
+                                            <picture class="article__img-wrap">
+                                                <img src="img/blog/article-img-10.jpg" alt="article" class="article__img">
+                                            </picture>
+                                        </a>
+                                        <div class="article__figcaption">
+                                            <a href="#" class="article__rubric">lifestyle</a>
+                                            <div class="article__actions">
+                                                <a href="#" class="comments">
+                                                    <span class="comments__icon material-icons">forum</span>
+                                                    <span class="comments__text">7</span>
+                                                </a>
+                                                <a href="#" class="likes">
+                                                    <span class="likes__icon material-icons">favorite_border</span>
+                                                    <span class="likes__text">15</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="article__about">
+                                        <a href="#" class="article__description">
+                                            <h4 class="article__title">11 Fantastic Ways Passionate</h4>
+                                            <p class="article__text">Lorem ipsum dolor sit amet, to consectetur  adipi scing elit. Nulla vel vehicula lorem and lacus. Vestibulum vitae mauris gravida, ipsu viverra urna at, dictume nunc fringilla quam.</p>
+                                        </a>
+                                        <div class="article__author">
+                                            <a href="#" class="author author--row">
+                                                <div class="author__img-wrap">
+                                                    <img src="img/author-img-sm-1.jpg" alt="author" class="author__img">
+                                                </div>
+                                                <div class="author__about author__about--row">
+                                                    <h5 class="author__name author__name--row">james leman</h5>
+                                                    <time class="author__time" datetime="2016-04-28 10:15:00">April 28, 2016</time>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="article__more">
+                                                <span class="article__more-icon material-icons">more_vert</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="article article--full article--no-about md">
+                                    <div class="article__media-wrap">
+                                        <a href="#" class="article__media">
+                                            <picture class="article__img-wrap">
+                                                <img src="img/blog/article-img-11.jpg" alt="article" class="article__img">
+                                            </picture>
+                                        </a>
+                                        <div class="article__figcaption">
+                                            <a href="#" class="article__rubric">lifestyle</a>
+                                            <div class="article__actions">
+                                                <a href="#" class="comments">
+                                                    <span class="comments__icon material-icons">forum</span>
+                                                    <span class="comments__text">7</span>
+                                                </a>
+                                                <a href="#" class="likes">
+                                                    <span class="likes__icon material-icons">favorite_border</span>
+                                                    <span class="likes__text">15</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="article__about">
+                                        <a href="#" class="article__description">
+                                            <h4 class="article__title">11 Fantastic Ways Passionate</h4>
+                                            <p class="article__text">Lorem ipsum dolor sit amet, to consectetur  adipi scing elit. Nulla vel vehicula lorem and lacus. Vestibulum vitae mauris gravida, ipsu viverra urna at, dictume nunc fringilla quam.</p>
+                                        </a>
+                                        <div class="article__author">
+                                            <a href="#" class="author author--row">
+                                                <div class="author__img-wrap">
+                                                    <img src="img/author-img-sm-1.jpg" alt="author" class="author__img">
+                                                </div>
+                                                <div class="author__about author__about--row">
+                                                    <h5 class="author__name author__name--row">james leman</h5>
+                                                    <time class="author__time" datetime="2016-04-28 10:15:00">April 28, 2016</time>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="article__more">
+                                                <span class="article__more-icon material-icons">more_vert</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="article article--full md">
+                                    <div class="article__media-wrap">
+                                        <a href="#" class="article__media">
+                                            <picture class="article__img-wrap">
+                                                <img src="img/blog/article-img-12.jpg" alt="article" class="article__img">
+                                            </picture>
+                                        </a>
+                                        <div class="article__figcaption">
+                                            <a href="#" class="article__rubric">inspiration</a>
+                                            <div class="article__actions">
+                                                <a href="#" class="comments">
+                                                    <span class="comments__icon material-icons">forum</span>
+                                                    <span class="comments__text">7</span>
+                                                </a>
+                                                <a href="#" class="likes">
+                                                    <span class="likes__icon material-icons">favorite_border</span>
+                                                    <span class="likes__text">15</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="article__about">
+                                        <a href="#" class="article__description">
+                                            <h4 class="article__title">Art Makes You Mentally Healthy</h4>
+                                            <p class="article__text">Lorem ipsum dolor sit amet, to consectetur  adipi scing elit. Nulla vel vehicula lorem and lacus. Vestibulum vitae mauris gravida, ipsu viverra urna at, dictume nunc fringilla quam.</p>
+                                        </a>
+                                        <div class="article__author">
+                                            <a href="#" class="author author--row">
+                                                <div class="author__img-wrap">
+                                                    <img src="img/author-img-sm-2.jpg" alt="author" class="author__img">
+                                                </div>
+                                                <div class="author__about author__about--row">
+                                                    <h5 class="author__name author__name--row">Benjamin Miller</h5>
+                                                    <time class="author__time" datetime="2016-04-28 10:15:00">April 28, 2016</time>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="article__more">
+                                                <span class="article__more-icon material-icons">more_vert</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="section__more">
+                                <a href="#" class="more">
+                                    <span class="more__text">more</span>
+                                    <span class="more__icon material-icons">arrow_forward</span>
+                                </a>
+                            </div>
+                        </section>
+                        <aside class="aside" id="aside">
+                            <div class="search aside__items">
+                                <input class="search__field" type="search" name="" id="" placeholder="search">
+                                <span class="search__icon material-icons">search</span>
+                            </div>
+                            <div class="categories aside__items">
+                                <h3 class="aside__title">categories</h3>
+                                <ul class="menu menu--aside">
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">
+                                            Photography
+                                            <span class="menu__amount">195</span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">
+                                            Illustration
+                                            <span class="menu__amount">15</span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">
+                                            Graphic Design
+                                            <span class="menu__amount">36</span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">
+                                            Web design
+                                            <span class="menu__amount">220</span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" >
+                                            Videography
+                                            <span class="menu__amount">17</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="subscribe aside__items">
+                                <h3 class="aside__title">subscribe</h3>
+                                <form action="#" method="POST" class="form">
+                                    <label class="form__label">
+                                        name
+                                        <input type="text" placeholder="igor ten" class="form__field">
+                                    </label>
+                                    <label class="form__label">
+                                        email
+                                        <input type="email" placeholder="email@adress.com" class="form__field">
+                                    </label>
+                                    <button type="submit" class="form__btn btn">subscribe</button>
+                                </form>
+                                <p class="or">or</p>
+                                <ul class="social social--full">
+                                    <li class="social__item">
+                                        <a href="https://www.facebook.com/" class="social__link facebook" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="https://twitter.com/" class="social__link twitter" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="https://vk.com/" class="social__link vk" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-vk"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="https://www.pinterest.com/" class="social__link pinterest" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-pinterest-p"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="https://www.tumblr.com/" class="social__link tumblr" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-tumblr"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="https://dribbble.com/" class="social__link dribbble" rel="noopener noreferrer">
+                                            <i class="fab fa-dribbble"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-widget aside__items">
+                                <h3 class="aside__title">tab post widget</h3>
+                                <div class="tab-widget__toggler">
+                                    <a href="#" class="tab-widget__link tab-widget__link--active">recent post</a>
+                                    <a href="#" class="tab-widget__link">popular post</a>
+                                </div>
+                                <article class="tab-widget__item article article--row article--aside">
+                                    <div class="article__media-wrap">
+                                        <a href="#" class="article__media">
+                                            <picture class="article__img-wrap">
+                                                <img src="img/blog-aside/blog-aside-img-1.jpg" alt="article" class="article__img">
+                                            </picture>
+                                        </a>
+                                    </div>
+                                    <div class="article__about">
+                                        <div class="article__figcaption">
+                                            <time class="author__time" datetime="2016-04-28 10:15:00">April 28, 2016</time>
+                                            <a href="#" class="comments">
+                                                <span class="comments__icon material-icons">forum</span>
+                                                <span class="comments__text">17</span>
+                                            </a>
+                                        </div>
+                                        <h4 class="article__title">Lorem ipsum dolor sit amet.</h4>
+                                    </div>
+                                </article>
+                                <article class="tab-widget__item article article--row article--aside">
+                                    <div class="article__media-wrap">
+                                        <a href="#" class="article__media">
+                                            <picture class="article__img-wrap">
+                                                <img src="img/blog-aside/blog-aside-img-2.jpg" alt="article" class="article__img">
+                                            </picture>
+                                        </a>
+                                    </div>
+                                    <div class="article__about">
+                                        <div class="article__figcaption">
+                                            <time class="author__time" datetime="2016-04-28 10:15:00">April 28, 2016</time>
+                                            <a href="#" class="comments">
+                                                <span class="comments__icon material-icons">forum</span>
+                                                <span class="comments__text">17</span>
+                                            </a>
+                                        </div>
+                                        <h4 class="article__title">Lorem ipsum dolor sit amet.</h4>
+                                    </div>
+                                </article>
+                                <article class="tab-widget__item article article--row article--aside">
+                                    <div class="article__media-wrap">
+                                        <a href="#" class="article__media">
+                                            <picture class="article__img-wrap">
+                                                <img src="img/blog-aside/blog-aside-img-3.jpg" alt="article" class="article__img">
+                                            </picture>
+                                        </a>
+                                    </div>
+                                    <div class="article__about">
+                                        <div class="article__figcaption">
+                                            <time class="author__time" datetime="2016-04-28 10:15:00">April 28, 2016</time>
+                                            <a href="#" class="comments">
+                                                <span class="comments__icon material-icons">forum</span>
+                                                <span class="comments__text">17</span>
+                                            </a>
+                                        </div>
+                                        <h4 class="article__title">Lorem ipsum dolor sit amet.</h4>
+                                    </div>
+                                </article>
+                                <article class="tab-widget__item article article--row article--aside">
+                                    <div class="article__media-wrap">
+                                        <a href="#" class="article__media">
+                                            <picture class="article__img-wrap">
+                                                <img src="img/blog-aside/blog-aside-img-4.jpg" alt="article" class="article__img">
+                                            </picture>
+                                        </a>
+                                    </div>
+                                    <div class="article__about">
+                                        <div class="article__figcaption">
+                                            <time class="author__time" datetime="2016-04-28 10:15:00">April 28, 2016</time>
+                                            <a href="#" class="comments">
+                                                <span class="comments__icon material-icons">forum</span>
+                                                <span class="comments__text">17</span>
+                                            </a>
+                                        </div>
+                                        <h4 class="article__title">Lorem ipsum dolor sit amet.</h4>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="tags aside__items">
+                                <h3 class="aside__title">tags</h3>
+                                <ul class="tags-menu">
+                                    <li class="tags-menu__item"><a href="#" class="tags-menu__link">Photography</a></li>
+                                    <li class="tags-menu__item"><a href="#" class="tags-menu__link">Webdesign</a></li>
+                                    <li class="tags-menu__item"><a href="#" class="tags-menu__link">Youtube</a></li>
+                                    <li class="tags-menu__item"><a href="#" class="tags-menu__link">Envato</a></li>
+                                    <li class="tags-menu__item"><a href="#" class="tags-menu__link">Art</a></li>
+                                    <li class="tags-menu__item"><a href="#" class="tags-menu__link">Themefotest</a></li>
+                                    <li class="tags-menu__item"><a href="#" class="tags-menu__link">Illustration</a></li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="portfolio">
+            <ul class="instagrams">
+                <li class="instagrams__item">
+                    <a href="#" class="widget">
+                        <picture class="instagram__img-wrap">
+                            <img class="instagram__img" src="img/instagram-1.jpg" alt="instagram">
+                        </picture>
+                    </a>
+                </li>
+                <li class="instagrams__item">
+                    <a href="#" class="instagram">
+                        <picture class="instagram__img-wrap">
+                            <img class="instagram__img" src="img/instagram-2.jpg" alt="instagram">
+                        </picture>
+                    </a>
+                </li>
+                <li class="instagrams__item">
+                    <a href="#" class="instagram">
+                        <picture class="instagram__img-wrap">
+                            <img class="instagram__img" src="img/instagram-3.jpg" alt="instagram">
+                        </picture>
+                    </a>
+                </li>
+                <li class="instagrams__item">
+                    <a href="#" class="instagram">
+                        <picture class="instagram__img-wrap">
+                            <img class="instagram__img" src="img/instagram-4.jpg" alt="instagram">
+                        </picture>
+                    </a>
+                </li>
+                <li class="instagrams__item">
+                    <a href="#" class="instagram">
+                        <picture class="instagram__img-wrap">
+                            <img class="instagram__img" src="img/instagram-5.jpg" alt="instagram">
+                        </picture>
+                    </a>
+                </li>
+                <li class="instagrams__item">
+                    <a href="#" class="instagram">
+                        <picture class="instagram__img-wrap">
+                            <img class="instagram__img" src="img/instagram-6.jpg" alt="instagram">
+                        </picture>
+                    </a>
+                </li>
+                <li class="instagrams__item">
+                    <a href="#" class="instagram">
+                        <picture class="instagram__img-wrap">
+                            <img class="instagram__img" src="img/instagram-7.jpg" alt="instagram">
+                        </picture>
+                    </a>
+                </li>
+                <li class="instagrams__item">
+                    <a href="#" class="instagram">
+                        <picture class="instagram__img-wrap">
+                            <img class="instagram__img" src="img/instagram-8.jpg" alt="instagram">
+                        </picture>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="section section--bg section--subscribe">
+            <div class="container">
+                <div class="subscribe-block">
+                    <h2 class="subscribe-block__title title title--main title--white">Subscribe to our newsletter</h2>
+                    <input class="field" type="email" name="email" placeholder="email adress">
+                    <button type="submit" class="btn">subscribe</button>
+                </div>
+            </div>
+        </section>
+        <section class="section section--widgets" id="widgets">
+            <div class="container">
+                <ul class="widgets">
+                    <li class="widgets__item widgets__logo">
+                        <div class="widget">
+                            <a href="index.html" class="logo">
+                                <h2 class="title title--logo title--white">logo</h1>
+                            </a>
+                            <div class="widget__content">
+                                <p class="widget__text">LOGO sit amet varius orci. Duis upse commodo elit sedamocid nisimole up stie, vitae fringilla justo fringilla. Lori Vestibulum libr portaman neque enia gravida elementum facilisis ipsum leonardo. Vestibulum loeuenim and libero, lobortis eu tortor ut, hendrerit  maxi tellus. Vivamus egestas massa leo, sit amet facilisis commodo. </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="widgets__item">
+                        <div class="widget">
+                            <h3 class="widget__title title title--white">pages widget</h3>
+                            <div class="widget__content">
+                                <div class="menu-tabs"> 
+                                    <div class="menu-tabs__tab menu-tab">
+                                        <input type="checkbox" class="menu-tab__field" id="tab1" name="tab-group">
+                                        <label for="tab1" class="menu-tab__title">home</label> 
+                                        <ul class="menu-tab__content">
+                                            <li class="menu-tab__item"><a href="#" class="menu-tab__link"></a></li>
+                                            <li class="menu-tab__item"><a href="#" class="menu-tab__link"></a></li>
+                                            <li class="menu-tab__item"><a href="#" class="menu-tab__link"></a></li> 
+                                        </ul> 
+                                    </div> 
+                                    <div class="menu-tabs__tab menu-tab">
+                                        <input class="menu-tab__field" type="checkbox" id="tab2" name="tab-group" checked>
+                                        <label for="tab2" class="menu-tab__title">pages</label> 
+                                        <ul class="menu-tab__content">
+                                            <li class="menu-tab__item">
+                                                <a href="#" class="menu-tab__link">service</a>
+                                            </li>
+                                            <li class="menu-tab__item">
+                                                <a href="#" class="menu-tab__link">faq</a>
+                                            </li>
+                                            <li class="menu-tab__item">
+                                                <a href="#" class="menu-tab__link">about</a>
+                                            </li> 
+                                        </ul>
+                                    </div> 
+                                    <div class="menu-tabs__tab menu-tab">
+                                        <input class="menu-tab__field" type="checkbox" id="tab3" name="tab-group">
+                                        <label for="tab3" class="menu-tab__title">portfolio</label> 
+                                        <ul class="menu-tab__content">
+                                            <li class="menu-tab__item"><a href="#" class="menu-tab__link"></a></li>
+                                            <li class="menu-tab__item"><a href="#" class="menu-tab__link"></a></li>
+                                            <li class="menu-tab__item"><a href="#" class="menu-tab__link"></a></li> 
+                                        </ul>
+                                    </div>
+                                    <div class="menu-tabs__tab menu-tab">
+                                        <input class="menu-tab__field" type="checkbox" id="tab4" name="tab-group">
+                                        <label for="tab4" class="menu-tab__title">blog</label> 
+                                        <ul class="menu-tab__content">
+                                            <li class="menu-tab__item"><a href="#" class="menu-tab__link"></a></li>
+                                            <li class="menu-tab__item"><a href="#" class="menu-tab__link"></a></li>
+                                            <li class="menu-tab__item"><a href="#" class="menu-tab__link"></a></li> 
+                                        </ul>
+                                    </div>
+                                    <div class="menu-tabs__tab menu-tab">
+                                        <input class="menu-tab__field" type="checkbox" id="tab5" name="tab-group">
+                                        <label for="tab5" class="menu-tab__title">shop</label> 
+                                        <ul class="menu-tab__content">
+                                            <li class="menu-tab__item"><a href="#" class="menu-tab__link"></a></li>
+                                            <li class="menu-tab__item"><a href="#" class="menu-tab__link"></a></li>
+                                            <li class="menu-tab__item"><a href="#" class="menu-tab__link"></a></li> 
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="widgets__item">
+                        <div class="widget">
+                            <h3 class="widget__title title title--white">twitter widget</h3>
+                            <div class="widget__content">
+                                <ul class="publications">
+                                    <li class="publications__item">
+                                        <div class="publication">
+                                            <p class="publication__text">
+                                                <i class="publication__icon fab fa-twitter"></i>
+                                                <span class="publication__comment">@LOGO, Duis commodo elit sed nisi molestie</span>
+                                            </p>
+                                            <div class="publication__about">
+                                                <time class="publication__time" datetime="2001-05-15 19:00">
+                                                    <span>2 hours ago</span>
+                                                    <svg width="24" height="24">
+                                                        <use xlink:href="#arrow-right"></use>
+                                                    </svg>
+                                                </time>
+                                                <a href="#">reply</a>
+                                                <a href="#">retweet</a>
+                                                <a href="#">favorite</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="publications__item">
+                                        <a href="#" class="publication">
+                                            <p class="publication__text">
+                                                <i class="publication__icon fab fa-twitter"></i>
+                                                <span class="publication__comment">@LOGO, Duis commodo elit sed nisi molestie</span>
+                                            </p>
+                                            <div class="time">
+                                                <time datetime="2001-05-15 19:00">2 hours ago</time>
+                                                <a href="#">reply</a>
+                                                <a href="#">retweet</a>
+                                                <a href="#">favorite</a>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="publications__item">
+                                        <a href="#" class="publication">
+                                            <p class="publication__text">
+                                                <i class="publication__icon fab fa-twitter"></i>
+                                                <span class="publication__comment">@LOGO, Duis commodo elit sed nisi molestie</span>
+                                            </p>
+                                            <div class="time">
+                                                <time datetime="2001-05-15 19:00">2 hours ago</time>
+                                                <a href="#">reply</a>
+                                                <a href="#">retweet</a>
+                                                <a href="#">favorite</a>
+                                            </div>
+                                        </a>
+                                    </li>    
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="widget widget--social">
+                            <h3 class="widget__title title title--white">social widget</h3>
+                            <div class="widget__content">
+                                <ul class="social social--full">
+                                    <li class="social__item">
+                                        <a href="https://www.facebook.com/" class="social__link facebook" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="https://twitter.com/" class="social__link twitter" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="https://vk.com/" class="social__link vk" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-vk"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="https://www.pinterest.com/" class="social__link pinterest" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-pinterest-p"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="https://www.tumblr.com/" class="social__link tumblr" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-tumblr"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="https://dribbble.com/" class="social__link dribbble" rel="noopener noreferrer">
+                                            <i class="fab fa-dribbble"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="widgets__item">
+                        <div class="widget">
+                            <h3 class="widget__title title title--white">flickr widget</h3>
+                            <div class="widget__content">
+                                <div class="grid">
+                                    <img src="img/flickr-widget/flickr-img-1.jpg" alt="">
+                                    <img src="img/flickr-widget/flickr-img-2.jpg" alt="">
+                                    <img src="img/flickr-widget/flickr-img-3.jpg" alt="">
+                                    <img src="img/flickr-widget/flickr-img-4.jpg" alt="">
+                                    <img src="img/flickr-widget/flickr-img-5.jpg" alt="">
+                                    <img src="img/flickr-widget/flickr-img-6.jpg" alt="">
+                                    <img src="img/flickr-widget/flickr-img-7.jpg" alt="">
+                                    <img src="img/flickr-widget/flickr-img-8.jpg" alt="">
+                                    <img src="img/flickr-widget/flickr-img-9.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="widgets__item">
+                        <div class="widget">
+                            <h3 class="widget__title title title--white">news letter</h3>
+                            <div class="widget__content">
+                                <form action="#" method="POST" class="form form--footer">
+                                    <input type="text" class="form__item form__field" placeholder="name">
+                                    <input type="email" class="form__item form__field" placeholder="Email Address">
+                                    <textarea class="form__item form__textarea" placeholder="message"></textarea>
+                                    <button type="submit" class="btn form__btn form__item"></button>
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <nav class="nav">
+                <ul class="footer__social social">
+                    <li class="social__item">
+                        <a href="https://www.facebook.com/" class="social__link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="https://twitter.com/" class="social__link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="https://vk.com/" class="social__link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="https://www.pinterest.com/" class="social__link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="https://www.tumblr.com/" class="social__link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-tumblr"></i>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="https://dribbble.com/" class="social__link" rel="noopener noreferrer">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer__menu menu menu--footer">
+                    <li class="menu__item">
+                        <a href="#about" class="menu__link">home</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#projects" class="menu__link">portfolio</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#news" class="menu__link">blog</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#contact" class="menu__link">pages</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#contact" class="menu__link">shop</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#contact" class="menu__link">components</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#contact" class="menu__link">features</a>
+                    </li>
+                </ul>
+                <div class="search">
+                    <span class="nav-actions__icon material-icons">search</span>
+                </div>
+                <div class="lang">
+                    <span class="lang__icon material-icons">language</span>
+                    <select class="lang__select">
+                        <option class="lang__item">
+                            <span class="lang__eng">eng</span>
+                        </option>
+                        <option class="lang__item">
+                            <a href="#" class="lang__rus">rus</a>
+                        </option>
+                    </select>
+                </div>
+            </nav>
+            
+        </div>
+    </footer>
+    <svg style="display: none;">
+        <symbol id="arrow-down" viewBox="0 0 11 6">
+            <path d='M5.5 6L11 .7l-.73-.7L5.5 4.6.73 0 0 .7z' />
+        </symbol>
+        <symbol id="arrow-right" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"/>
+        </symbol>
+    </svg>
+    <script src="js/main.min.js"></script>
+</body>
+</html>

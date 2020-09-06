@@ -1,0 +1,421 @@
+.section {
+    &--blog { padding-bottom: 40px; }
+
+    &__more { margin-top: 40px; }
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto-fill, 100px);
+    grid-auto-flow: dense;
+    gap: 20px;
+
+    grid-template-areas: 
+        'a a'
+        'a a'
+        'a a'
+        'b b'
+        'c d'
+        'c f'
+        'e f'
+    ;
+    @media screen and (min-width: 576px) {
+        grid-template-areas: none;
+        grid-template-rows: auto;
+    }
+
+    @media screen and (min-width: 850px) {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+.a { grid-area: a; }
+.b { grid-area: b; }
+.c { grid-area: c; }
+.d { grid-area: d; }
+.e { grid-area: e; }
+.f { grid-area: f; }
+
+.article {
+    border-radius: 4px;
+    background-color: $secondary-color;
+    @include flex($jc: stretch, $ali: flex-start);
+    flex-direction: column;
+    overflow: hidden;
+    grid-column: span 2;
+
+    @media screen and (min-width: 576px) { 
+        grid-area: unset;
+        grid-column: span 2;
+    }
+    @media screen and (min-width: 850px) {
+        grid-column: span 6;
+    }
+
+    &__media-wrap {
+        position: relative;
+        @include full;
+        color: $secondary-color;
+        font-size: 0;
+    }
+    &__media {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        padding-top: 77%;
+        background-color: $medium-black;
+        @include full;
+        @include hover {
+            .article__img-wrap {
+                &:before { background-color: rgba($medium-black, .5); }
+            }
+        }
+        @media screen and (min-width: 576px) { padding-top: 61%; }
+    }
+    &__img-wrap {
+        display: block;
+        @include posA(0,0,0,0);
+        &:before {
+            content: '';
+            @include posA(0,0,0,0);
+            background-image: linear-gradient(to bottom, transparent 60%, rgba($medium-black, .7));
+            z-index: 5;
+            @include tr;
+        }
+    }
+    &__img {
+        display: block;
+        @include posA($top: 50%, $left: 50%);
+        @include transform;
+        min-width: 100%;
+        min-height: 100%;
+    }
+    &__play {
+        @include posA($top: 50%, $left: 50%);
+        @include transform;
+        z-index: 8;
+        opacity: 0;
+        @include hover {
+            .article__play-icon { color: $primary-color; }
+        }
+        @media screen and (min-width: 576px) { opacity: 1; }
+        &-icon { 
+            font-size: 4.8rem;
+            @include tr;
+        }
+    }
+    &__figcaption {
+        @include flex;
+        flex-wrap: wrap;
+        @include posA($bottom: 7px, $left: 10px, $right: 10px);
+        z-index: 8;
+
+        @media screen and (min-width: 768px) { 
+            bottom: 20px; 
+            left: 20px; 
+            right: 20px;
+        }
+    }
+    &__rubric {
+        text-transform: uppercase;
+        font-family: $menu-ff;
+        font-size: 1.2rem;
+        @include tr;
+        @include hover { color: $primary-color; }
+    }
+    &__actions { 
+        margin-top: 5px;
+        @include flex;
+        @media screen and (min-width: 583px) { margin-top: 0; } 
+    }
+
+    .comments {
+        @include flex;
+        margin-left: 0;
+        margin-right: 10px;
+        color: $secondary-color;
+        @include hover { color: $primary-color; }
+    }
+    &__about { 
+        flex-grow: 1;
+        width: 100%;
+    }
+    &__description {
+        display: block;
+        padding: 5px 10px;
+        border-bottom: $border-width solid rgba($black, .12);
+        @include tr;
+        @include hover { background-color: $light-gray; }
+
+        @media screen and (min-width: 576px) { padding: 10px; }
+        @media screen and (min-width: 768px) { padding-left: 20px; padding-right: 20px; }
+    }
+    &__title {
+        text-transform: capitalize;
+        font-size: 1.4rem;
+        line-height: 1.5;
+        overflow: hidden;
+        max-height: 42px;
+        @include clamp($clamp: 2);
+
+        @media screen and (min-width: 768px) { font-size: 1.6rem; max-height: 48px;}
+        &--primary { color: $primary-color; }
+    }
+    &__text {
+        font-size: 1.4rem;
+        margin-top: 8px;
+        display: none;
+        overflow: hidden;
+
+        @media screen and (min-width: 576px) { display: block; }
+        @media screen and (min-width: 850px) { margin-top: 12px; }
+    }
+    &__author {
+        padding: 5px 10px;
+        position: relative;
+
+        @media screen and (min-width: 576px) { padding: 10px; }
+        @media screen and (min-width: 768px) { padding-left: 20px; padding-right: 20px; }
+
+        .author__img-wrap {
+            display: none;
+            @media screen and (min-width: 768px) { display: block; }
+        }
+        .author__about--row {
+            margin: 0;
+            @media screen and (min-width: 768px) { margin-left: 10px; }
+        }
+    }
+    &__more {
+        @include posA($right: -12px, $top: 50%);
+        @include transform;
+        &-icon {
+            @include tr;
+            @include hover { color: $header-primary-color; }
+        }
+    }
+
+    &--full {
+        .article__media { padding-top: 64%; }
+        .article__play {
+            opacity: 1;
+            &-icon { font-size: 6rem; }
+        }
+        .article__figcaption {
+            bottom: 18px;
+            left: 18px;
+            right: 18px;
+        }
+        .comments { margin-right: 20px; }
+        .likes { margin: 0; }
+        .article__description { padding: 20px; }
+        .article__title {
+            font-size: 1.6rem;
+            overflow: hidden;
+            max-height: 48px;
+            @include clamp($clamp: 2);
+        }
+        .article__text { display: block; }
+        .article__author { padding: 20px; }
+        .author__img-wrap { display: block; }
+        .author__about--row { margin-left: 10px; }
+    }
+    &--row {
+        flex-direction: row;
+        height: 100px;
+
+        .article__media-wrap {
+            width: 47%;
+        }
+        .article__about {
+            @media screen and (max-width: 576px) {
+                width: 53%;
+            }
+        }
+        .author__time { margin-top: 0; }
+    }
+    &--sm-col {
+        @media screen and (max-width: 575px) { grid-column: span 1; }
+        .article__more {
+            @media screen and (max-width: 374px) { top: 65%; }
+        }
+        
+    }
+    &--no-about {
+        .article__about { 
+            display: none; 
+            @media screen and (min-width: 576px) { display: block; }
+        }
+            
+    }
+    &--none {
+        @media screen and (min-width: 850px) { display: none; }
+    }
+}
+
+.full {
+    @media screen and (min-width: 850px) { 
+        grid-column: span 6; 
+        .article__media { padding-top: 51%; }
+        .article__title { font-size: 1.8rem; }
+        .article__text { 
+            font-size: 1.6rem;
+            max-height: 48px;
+            -webkit-line-clamp: 2;
+        }
+    }
+}
+.row {
+    @media screen and (min-width: 576px) { height: 165px; flex-direction: row;}
+    @media screen and (min-width: 850px) { grid-column: span 6; }
+
+    .article__media-wrap {
+        @media screen and (min-width: 576px) { width: 100%; max-width: 260px; }
+    }
+    .article__title {
+        @media screen and (min-width: 576px) {
+            max-height: 24px;
+            -webkit-line-clamp: 1;
+        }
+    }
+    .article__text {
+        
+        
+        @media screen and (min-width: 576px) {
+            max-height: 42px;
+            @include clamp($clamp: 2);
+        }
+    }
+}
+.col {
+    @media screen and (min-width: 576px) {
+        grid-column: span 1;
+        flex-direction: column;
+        height: auto;
+    }
+    @media screen and (min-width: 850px) {
+        grid-column: span 2;
+    }
+    .article__media {
+        @media screen and (min-width: 576px) {
+            padding-top: 0;
+        }
+    }
+    .article__figcaption {
+        @media screen and (min-width: 576px) {
+            bottom: 15px;
+        }
+    }
+    .article__media-wrap {
+        @media screen and (min-width: 576px) {
+            width: 100%;
+            height: 160px;
+        }
+    }
+    .article__about {
+        @media screen and (min-width: 576px) {
+            width: 100%;
+        }
+    }
+    .author__img-wrap {
+        @media screen and (min-width: 576px) {
+            display: block;
+        }
+        @media screen and (min-width: 850px) and (max-width: 1024px) {
+            display: none;
+        }
+    }
+    .article__description {
+        @media screen and (min-width: 576px) {
+            padding: 15px 17px 30px;
+        }
+    }
+    .article__author {
+        @media screen and (min-width: 576px) {
+            padding: 15px 17px;
+        }
+    }
+    .article__title {
+        @media screen and (min-width: 576px) {
+            font-size: 1.4rem;
+            min-height: 42px;
+        }
+    }
+    .article__text {
+        max-height: 84px;
+        -webkit-line-clamp: 4;
+    }
+    .author__about--row {
+        @media screen and (min-width: 576px) {
+            margin-left: 10px;
+        }
+        @media screen and (min-width: 850px) and (max-width: 1024px) {
+            margin-left: 0;
+        }
+    }
+    .author__time {
+        @media screen and (min-width: 576px) {
+            margin-top: 12px;
+        }
+    }
+}
+.md {
+    @media screen and (min-width: 576px) {
+        grid-column: span 1;
+    }
+    @media screen and (min-width: 850px) {
+        grid-column: span 3;
+    }
+}
+
+
+
+
+.author {
+    &--row {
+        flex-direction: row;
+
+        @include hover {
+            .author__img-wrap { border-color: $primary-color; }
+            .author__time { opacity: 1; }
+        }
+    }
+    &__name {
+        &--row {
+            margin: 0;
+        }
+    }
+}
+
+.more {
+    @include flex($jc: flex-end);
+    @include hover {
+        .more__text, .more__icon {
+            color: $primary-color;
+        }
+        .more__icon {
+            border-color: $primary-color;
+            background-color: $light-gray;
+        }
+    }
+
+    &__text {
+        font-family: $menu-ff;
+        font-weight: bold;
+        text-transform: capitalize;
+        font-size: 1.6rem;
+        @include tr;
+    }
+    &__icon {
+        background-color: $secondary-color;
+        border: $border-width * 1 solid transparent;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 38px;
+        margin-left: 10px;
+        @include tr;
+    }
+}
