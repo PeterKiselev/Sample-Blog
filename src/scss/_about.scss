@@ -49,7 +49,6 @@
     &__author-block {
         margin-top: $gap;
         text-align: center;
-
         @media screen and (min-width: 768px) { margin-top: 80px; }
     }
 }
@@ -61,7 +60,7 @@
 
     @include hover {
         .author__img-wrap { border-color: $secondary-color; }
-        .author__time--white { opacity: 1; }
+        .time--white { opacity: 1; }
     }
 
     &__img-wrap {
@@ -90,15 +89,16 @@
         
         &--white { color: $secondary-color; }
     }
-    &__time {
-        display: inline-block;
-        margin-top: 12px;
-        opacity: .54;
-        font-size: 1.2rem;
-        @include tr;
+    &__time { margin-top: 12px; }
+}
 
-        &--white { color: $secondary-color; }
-    }
+.time {
+    display: inline-block;
+    opacity: .54;
+    font-size: 1.2rem;
+    @include tr;
+
+    &--white { color: $secondary-color; }
 }
 
 .comments {
@@ -130,9 +130,7 @@
         height: 16px;
         color: $secondary-color;
         @include tr;
-        @include hover {
-            color: $primary-color;
-        }
+        @include hover { color: $primary-color; }
         &:after { font-size: 20px; }
     }
     &-next {

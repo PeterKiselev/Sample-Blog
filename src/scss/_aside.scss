@@ -1,10 +1,9 @@
 .aside {
-    padding-top: 25px;
+    padding: 25px 0 0 40px;
+    background-color: $secondary-color;
     display: none;
 
-    @media screen and (min-width: 850px) {
-        display: block;
-    }
+    @media screen and (min-width: 850px) { display: block; }
 
     &__title {
         text-transform: uppercase; 
@@ -13,9 +12,7 @@
         border-bottom: $border-width solid rgba($primary-color, .38);
     }
     &__items {
-        & + & {
-            margin-top: 30px;
-        }
+        & + & { margin-top: 30px; }
     }
 }
 
@@ -46,43 +43,6 @@
         line-height: 35px;
         font-size: 2.4rem;
         color: $secondary-color;
-    }
-}
-
-.categories {
-    margin-top: 30px;
-}
-
-.menu {
-    &--aside {
-        justify-content: flex-start;
-        flex-direction: column;
-        align-items: flex-start;
-        position: relative;
-        opacity: 1;
-        background-color: transparent;
-        padding-top: 0;
-        height: auto;
-        transform: none;
-        .menu__item {
-            display: block;
-            width: 100%;
-        }
-        .menu__link {
-            display: block;
-            color: rgba($black, .87);
-            padding: 15px 0;
-            text-transform: capitalize;
-            border-bottom: $border-width solid rgba($black, .1);
-            @include flex;
-            font-weight: normal;
-            @include hover {
-                background-color: $light-gray;
-            }
-        }
-        .menu__amount {
-            font-weight: bold;
-        }
     }
 }
 
@@ -186,6 +146,12 @@
     
 }
 
+.tags {
+    &__menu {
+        margin-top: 10px;
+        margin-left: -5px;
+    }
+}
 .tags-menu {
     margin: 15px 0 0 -5px;
     &__item {

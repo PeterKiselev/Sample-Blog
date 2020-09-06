@@ -77,29 +77,13 @@
     }
   
     @media screen and (min-width: 1070px) { display: none; }
-  }
-  .select_common {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    position: relative;
-    border: $border-width solid rgba($black, .12);
-    border-radius: 4px;
-    cursor: pointer;
-    
-    &:after {
-      content: '';
-      @include posA($top: 0, $bottom: 0, $right: 0);
-      display: inline-block;
-      width: 44px;
-      height: 44px;
-      background-color: $medium-gray;
-      border-left: $border-width solid rgba($black, .12);
+
+    @include hover {
+      background-color: rgba($primary-color, .8);
     }
-  
-    @media screen and (min-width: 1070px) { display: none; }
   }
   .select_common .placeholder_select {
+    text-transform: capitalize;
     position: relative;
     padding: 10px 15px;
     font-size: 1.6rem;
@@ -108,7 +92,7 @@
       content: '';
       display: block;
       width: 0;
-      @include posA($right: 15px);
+      @include posA($right: 17px);
       z-index: 3;
       border-right: 5px solid transparent;
       border-left: 5px solid transparent;
@@ -135,7 +119,7 @@
   }
   
   .select_common .select_items li {
-    text-transform: uppercase;
+    text-transform: capitalize;
     padding: 10px 15px;
     color: $black;
     background-color: $secondary-color;
