@@ -117,9 +117,25 @@
             max-width: 100px;
         }
         .article__media { padding-top: 0; }
-        .article__figcaption {
-            position: relative;
+        .article__about {
+            height: 100%;
+            display: block;
+            padding-left: 15px;
+            padding-bottom: 10px;
+            @include tr;
+            @include hover {
+                background-color: $medium-gray;
+                .article__title { color: $primary-color; }
+                .comments { opacity: .8; }
+            }
         }
+        .article__figcaption { position: static; }
+        .time { opacity: 1; }
+        .comments {
+            color: $primary-color;
+            &__icon { margin-right: 3px; }
+        }
+        .article__title { font-size: 1.4rem; @include tr;}
     }
     
 }

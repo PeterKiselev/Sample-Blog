@@ -84,6 +84,7 @@ body {
     text-transform: uppercase;
     min-height: 45px;
     border-radius: 44px;
+    letter-spacing: $letter-space;
     box-shadow: 0px 17px 24px 0px rgba($btn-bg, .2);
     cursor: pointer;
     @include tr;
