@@ -2,13 +2,73 @@
     background-color: $dark-gray;
 
     &__social {
+        display: block;
+        margin-bottom: 15px;
         @include flex;
-        @media screen and (min-width: 992px) {
-            display: none;
-        }
+        flex-grow: 1;
+        @media screen and (min-width: 441px) { margin-bottom: 0; }
+        @media screen and (min-width: 992px) { display: none; }
     }
     &__menu {
         display: none;
         @media screen and (min-width: 992px) { display: flex; }
     }
+    &__copy {
+        font-family: $title-ff;
+        color: $secondary-color;
+        opacity: .5;
+        font-size: 1.2rem;
+        @media screen and (min-width: 425px) { display: none; }
+    }
 }
+
+.nav {
+    &--footer {
+        justify-content: center;
+        min-height: 80px;
+        flex-wrap: wrap;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+.footer-search {
+    margin: 0 10px;
+    position: relative;
+    display: none;
+
+    @media screen and (min-width: 425px) { display: block; }
+    &__field {
+        border-radius: 17px;
+        width: 100%;
+        max-width: 220px;
+        padding: 10px 30px 10px 15px;
+        text-transform: capitalize;
+        letter-spacing: inherit;
+        font-size: 1.4rem;
+        font-family: $menu-ff;
+        background-color: transparent;
+        border: $border-width solid rgba($secondary-color, .38);
+        color: inherit;
+        outline: none;
+        cursor: pointer;
+
+        &:focus { border-color: $header-primary-color; }
+        &:focus + .footer-search__icon { opacity: 1; color: $header-primary-color; }
+    }
+    &__icon {
+        font-size: 1.8rem;
+        @include posA($top: 50%, $right: 0);
+        @include transform;
+        color: $secondary-color;
+        opacity: .5;
+    }
+}
+
+.lang {
+    &--footer {
+        display: none;
+        @media screen and (min-width: 425px) { display: flex; }
+    }
+}
+  

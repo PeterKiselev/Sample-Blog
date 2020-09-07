@@ -12,6 +12,7 @@
     font-size: 1.4rem;
     position: relative;
     cursor: pointer;
+    text-transform: uppercase;
   }
   .select_common .placeholder_select {
     padding: 10px 15px;
@@ -53,6 +54,12 @@
   .select_active .select_items {
     display: block;
     border-radius: 0 0 3px 3px;
+  }
+}
+
+.lang--footer {
+  .select_common .select_items {
+    transform: translateY(-40%);
   }
 }
 

@@ -1,6 +1,6 @@
 <footer class="footer">
     <div class="container">
-        <nav class="nav">
+        <nav class="nav nav--footer">
             <ul class="footer__social social">
                 <li class="social__item">
                     <a href="https://www.facebook.com/" class="social__link" target="_blank" rel="noopener noreferrer">
@@ -56,20 +56,21 @@
                     <a href="#contact" class="menu__link">features</a>
                 </li>
             </ul>
-            <div class="search">
-                <span class="nav-actions__icon material-icons">search</span>
+            <div class="footer-search">
+                <input class="footer-search__field" type="search" placeholder="search">
+                <span class="footer-search__icon material-icons">search</span>
             </div>
-            <div class="lang">
+            <div class="lang lang--footer">
                 <span class="lang__icon material-icons">language</span>
-                <select class="lang__select">
-                    <option class="lang__item">
-                        <span class="lang__eng">eng</span>
-                    </option>
-                    <option class="lang__item">
-                        <a href="#" class="lang__rus">rus</a>
-                    </option>
+                <svg class="lang__arrow" width="11" height="6">
+                    <use xlink:href="#arrow-down"></use>
+                </svg>
+                <select name="lang" data-fixed-placeholder="" class="lang__select minimal hide_select">
+                    <option class="lang__item" value="1">eng</option>
+                    <option class="lang__item" value="2" selected="selected">rus</option>
                 </select>
             </div>
+            <p class="footer__copy">© 2016 LOGO | All Rights Reserved</p>
         </nav>
         
     </div>
