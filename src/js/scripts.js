@@ -20,7 +20,7 @@ window.addEventListener('resize', menuLinks);
 menuLinks();
 
 //slider 
-var swiper = new Swiper('.swiper-container', {
+var swiper = new Swiper('.swiper-container--about', {
     slidesPerGroup: 1,
     loop: true,
     autoplay: {
