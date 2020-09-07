@@ -923,16 +923,12 @@
                             </div>
                             <div class="subscribe aside__items">
                                 <h3 class="aside__title">subscribe</h3>
-                                <form action="#" method="POST" class="form">
-                                    <label class="form__label">
-                                        name
-                                        <input type="text" placeholder="igor ten" class="form__field">
-                                    </label>
-                                    <label class="form__label">
-                                        email
-                                        <input type="email" placeholder="email@adress.com" class="form__field">
-                                    </label>
-                                    <button type="submit" class="form__btn btn">subscribe</button>
+                                <form action="#" method="POST" class="form form--aside">
+                                    <label class="form__item form__label" for="nameAside">name</label>
+                                    <input type="text" placeholder="igor ten" class="form__item form__field" id="nameAside">
+                                    <label class="form__item form__label" for="emailAside">email</label>
+                                    <input type="email" placeholder="email@adress.com" class="form__item form__field" id="emailAside">
+                                    <button type="submit" class="form__item form__btn btn">subscribe</button>
                                 </form>
                                 <p class="or">or</p>
                                 <ul class="social social--full">
@@ -1341,9 +1337,9 @@
                             <div class="widget__content">
                                 <form action="#" method="POST" class="form form--footer">
                                     <input type="text" class="form__item form__field" placeholder="name">
-                                    <input type="email" class="form__item form__field" placeholder="Email Address">
-                                    <textarea class="form__item form__textarea" placeholder="message"></textarea>
-                                    <button type="submit" class="btn form__btn form__item"></button>
+                                    <input type="email" class="form__item form__field" placeholder="email address">
+                                    <textarea class="form__item form__field form__textarea" placeholder="message"></textarea>
+                                    <button type="submit" class="btn form__btn form__item">subscribe</button>
                                 </form>
                             </div>
                         </div>

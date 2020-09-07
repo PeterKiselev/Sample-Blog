@@ -1,0 +1,65 @@
+.form {
+    &__item {
+        display: block;
+        width: 100%;
+
+        & + & { margin-top: 15px; }
+    }
+    &__label {
+        text-transform: capitalize;
+        font-size: 1.6rem;
+        cursor: pointer;
+    }
+    &__field {
+        padding: .9em 1.25em;
+        background-color: transparent;
+        border-radius: $border-radius;
+        border-width: $border-width;
+        border-style: solid; 
+        letter-spacing: inherit;
+        cursor: pointer;
+
+        &:focus { outline: none; }
+
+        &[type="text"] { text-transform: capitalize; }
+    }
+    &__btn { border-radius: $border-radius; }
+    &__textarea { resize: none; }
+
+    &--aside {
+        padding-top: 15px;
+
+        .form__field {
+            border-color: rgba($black, .12);
+            font-size: 1.6rem;
+
+            &:focus { border-color: $primary-color; }
+        }
+        .form__btn { box-shadow: none; }
+    }
+
+    &--footer {
+        .form__field {
+            border-color: rgba($secondary-color, .38);
+            text-transform: capitalize;
+            color: $secondary-color;
+
+            &:focus { border-color: $header-primary-color; }
+        }
+        .form__btn {
+            background-color: $dark-gray;
+            border-color: $dark-gray;
+            box-shadow: none;
+
+            @include hover {
+                color: $header-primary-color;
+                background-color: $secondary-color;
+                border-color: $header-primary-color;
+            }
+        }
+        .form__textarea {
+            height: 120px;
+            overflow: hidden;
+        }
+    }
+}

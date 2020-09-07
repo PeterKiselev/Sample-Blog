@@ -67,7 +67,6 @@
 
         .menu__link {
             background-color: $light-gray;
-            color: $black;
             margin-left: 10px;
             margin-right: 10px;
             border-radius: 30px;
@@ -95,7 +94,6 @@
         .menu__item { display: block; }
         
         .menu__link {
-            color: rgba($black, .87);
             padding: 15px 0;
             text-transform: capitalize;
             border-bottom-color: rgba($black, .12);
