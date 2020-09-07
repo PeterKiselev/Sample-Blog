@@ -21,15 +21,27 @@ menuLinks();
 
 //slider 
 var swiper = new Swiper('.swiper-container', {
-    // spaceBetween: 30,
     slidesPerGroup: 1,
     loop: true,
-    // autoplay: {
-    //     delay: 4000,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+    },
+});
+
+var swiperBlogImg = new Swiper('.swiper-container--blog-img', {
+    slidesPerGroup: 1,
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: '.blog-buttons__button--next',
+        prevEl: '.blog-buttons__button--prev',
     },
 });

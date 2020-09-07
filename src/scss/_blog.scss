@@ -369,3 +369,42 @@
         @include tr;
     }
 }
+
+.swiper-container--blog-img {
+    width: 100%;
+} 
+
+.blog-buttons {
+    @include flex;
+    @include posA($top: calc(50% - 18px), $left: 10px, $right: 10px);
+    z-index: 5;
+
+    &__button {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        background-color: $secondary-color;
+        @include flex($jc: center);
+        border: $border-width * 2 solid transparent;
+        @include tr;
+        cursor: pointer;
+
+        @include hover {
+            background-color: $primary-color;
+            border-color: $secondary-color;
+            svg { fill: $secondary-color; }
+        }
+        svg {
+            width: 15px;
+            height: 8px;
+            fill: $primary-color;
+            @include tr;
+        }
+        &--next {
+            svg { transform: rotate(-90deg); }
+        }
+        &--prev {
+            svg { transform: rotate(90deg); }
+        }
+    }
+}
