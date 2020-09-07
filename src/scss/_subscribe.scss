@@ -3,6 +3,10 @@
         padding: 80px 0;
         background-image: url(../img/subscribe-bg.jpg);
         position: relative;
+        display: none;
+
+        @media screen and (min-width: 576px) { display: block; }
+
         &:after {
             content: '';
             @include posA(0,0,0,0);
@@ -14,28 +18,33 @@
 .subscribe-block {
     position: relative;
     z-index: 5;
-    @include flex;
+    @include flex($jc: center);
     flex-wrap: wrap;
 
-    &__title {
-        text-transform: none;
+    &__title { 
+        text-transform: none; margin-bottom: $gap; 
+        @media screen and (min-width: 992px) { margin-bottom: 0; }
+        @media screen and (min-width: 992px) and (max-width: 1175px) { font-size: 2em; }
     }
 }
 
+
 .field {
-    &:focus { outline: none; }
-    padding: 15px 18px;
+    &:focus { outline: none; border-color: $primary-color; }
+    padding: .9em 1.125em;
     border: $border-width solid rgba($secondary-color, .38);
-    border-radius: 34px;
+    border-radius: 22px;
     background-color: transparent;
     color: $secondary-color;
     text-overflow: ellipsis;
     font-size: 1.6rem;
     width: 100%;
     max-width: 270px;
+    cursor: pointer;
+    margin: 0 15px;
 
     &::placeholder {
         text-transform: capitalize;
-        letter-spacing: .05em;
+        letter-spacing: $letter-space;
     }
 }

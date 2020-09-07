@@ -1,11 +1,16 @@
+.section {
+    &--instagrams {
+        display: none;
+        @media screen and (min-width: 720px) { display: block; }
+    }
+}
+
 .instagrams {
     @include flex($jc: center);
     flex-wrap: wrap;
     font-size: 0;
 
-    &__item {
-        flex: 0 1 240px;
-    }
+    &__item { flex: 0 1 240px; }
 }
 .instagram {
     display: inline-block;
@@ -13,9 +18,7 @@
     max-width: 240px;
 
     @include hover {
-        .instagram__img-wrap:before {
-            background-color: rgba($medium-black, .4);
-        }
+        .instagram__img-wrap:before { background-color: rgba($medium-black, .4); }
     }
 
     &__img-wrap {
