@@ -12,17 +12,17 @@
         border-bottom: $border-width solid rgba($primary-color, .38);
     }
     &__items {
-        & + & { margin-top: 30px; }
+        & + & { margin-top: $gap; }
     }
-}
+} 
 
 .search {
     position: relative;
     &__field {
-        border-radius: 44px;
+        border-radius: 22px;
         width: 100%;
         max-width: 265px;
-        padding: 15px 5px 15px 20px ;
+        padding: 15px 5px 15px 20px;
         text-transform: capitalize;
         letter-spacing: inherit;
         font-size: 1.6rem;
@@ -30,6 +30,9 @@
         background-color: $light-gray;
         border: $border-width solid $light-gray;
         outline: none;
+        cursor: pointer;
+
+        &:focus { border-color: $header-primary-color; }
     }
     &__icon {
         display: inline-block;

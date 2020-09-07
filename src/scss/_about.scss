@@ -30,17 +30,6 @@
         @include font($title-ff, 2rem, rgba($secondary-color, .7), 400, 1);
         text-transform: uppercase;
     }
-    &__title {
-        font-size: 3rem;
-        overflow: hidden;
-        max-height: 90px;
-        @include clamp($clamp: 2);
-
-        @media screen and (min-width: 768px) {
-            font-size: 4.2rem;
-            max-height: 126px;
-        }
-    }
 
     &__title, &__btn { margin-top: $gap; }
 
