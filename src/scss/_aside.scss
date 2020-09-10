@@ -1,7 +1,8 @@
 .aside {
-    padding: 25px 0 0 40px;
+    padding: 25px 40px 0;
     background-color: $secondary-color;
     display: none;
+    margin-right: -40px;
 
     @media screen and (min-width: 850px) { display: block; }
 
